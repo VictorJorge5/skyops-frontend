@@ -98,7 +98,7 @@ export function SidebarFilters({
         <Section icon={<Clock className="h-4 w-4" />} label="Previsión" badge={`${forecastHours}h`}>
           <Slider
             value={[forecastHours]}
-            onValueChange={(v) => onForecastHoursChange(v[0])}
+            onValueChange={(v) => onForecastHoursChange(Array.isArray(v) ? v[0] : v)}
             min={1} max={24} step={1} className="w-full mt-2"
           />
           <div className="flex justify-between text-[11px] text-foreground/50 mt-1">
