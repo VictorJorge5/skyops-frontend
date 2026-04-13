@@ -76,7 +76,7 @@ export function SidebarFilters({
 
         {/* Aeropuerto */}
         <Section icon={<MapPin className="h-4 w-4" />} label="Aeropuerto">
-          <Select value={selectedAirport} onValueChange={onAirportChange}>
+          <Select value={selectedAirport} onValueChange={(v) => onAirportChange(v ?? "ALL")}>
             <SelectTrigger className="h-9 text-[13px] w-full text-foreground">
               <SelectValue />
             </SelectTrigger>
